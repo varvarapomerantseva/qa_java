@@ -42,6 +42,6 @@ public class FelineTest {
         Mockito.doReturn(objectsList).when(feline).getFood(Mockito.anyString());
         assertEquals(objectsList, feline.eatMeat());
     }
-
+    // Spy помогает сделать метод eatMeat изолированным от getFood, таким образом независимо от того, что будет передано или «сломано» в getFood, тест будет провален только если будет что-то сломано в самом методе eatMeat, который мы проверяем. Mock возвращает дефолтные значения, а нам нужно чтобы метод отработал так как прописано в классе.
 
 }
